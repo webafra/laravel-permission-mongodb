@@ -1,0 +1,62 @@
+{
+    "name": "webafra/laravel-permission-mongodb",
+    "description": "Permission handling for Laravel 5.2 and up using mongodb",
+    "keywords": [
+        "laravel",
+        "security",
+        "mongodb",
+        "permission",
+        "acl",
+        "webafra",
+        "spatie",
+        "jenssegers"
+    ],
+    "homepage": "https://github.com/webafra/laravel-permission-mongodb",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mostafa ali nasab",
+            "email": "webafra@gmail.com",
+            "homepage": "https://github.com/webafra",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/auth": "self.version",
+        "illuminate/container": "self.version",
+        "illuminate/contracts": "self.version",
+        "mongodb/laravel-mongodb": "^3.9"
+    },
+    "require-dev": {
+        "monolog/monolog": "^3.2",
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^9.5.10",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webafra\\Permission\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webafra\\Permission\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs --standard=psr2 src/",
+        "fix-style": "phpcbf --standard=psr2 src/"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webafra\\Permission\\PermissionServiceProvider"
+            ]
+        }
+    }
+}
